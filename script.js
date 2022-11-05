@@ -9,6 +9,8 @@ const amount = document.getElementById("amount");
 const addButton = document.querySelector(".add");
 const subtractButton = document.querySelector(".subtract");
 
+const bigButton = document.querySelector(".bigbutton");
+
 const localStorageTransactions = JSON.parse(
   localStorage.getItem("transactions")
 );
@@ -37,6 +39,7 @@ function addTransaction(e) {
 
     text.value = "";
     amount.value = "";
+    bigButton.style.display = "flex";
   }
 }
 
@@ -60,6 +63,7 @@ function subtractTransaction(e) {
 
     text.value = "";
     amount.value = "";
+    bigButton.style.display = "flex";
   }
 }
 
@@ -137,3 +141,7 @@ addButton.addEventListener("click", addTransaction);
 subtractButton.addEventListener("click", subtractTransaction);
 
 init();
+
+bigButton.addEventListener("click", () => {
+  bigButton.style.display = "none";
+});

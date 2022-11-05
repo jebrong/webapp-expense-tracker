@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -16,17 +16,39 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
 }
 
 .container {
   margin: 30px auto;
   width: 350px;
+  background-color: rgb(249, 167, 62, 0.9);
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 h1 {
   letter-spacing: 1px;
-  margin: 0;
+  margin: 5px;
+  text-align: center;
+}
+.title {
+  padding-bottom: 10px 0;
+  margin: 0 0 10px;
+  text-align: center;
+  background-color: #264b96;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
 }
 
 h3 {
@@ -38,24 +60,33 @@ h3 {
 h4 {
   margin: 0;
   text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+.remain {
+  margin-top: 20px;
+  color: black;
 }
 
 .inc-exp-container {
-  background-color: #fff;
-  box-shadow: var(--box-shadow);
-  padding: 20px;
+  padding: 10px 0;
   display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+  justify-content: space-around;
+  margin: 0px 0 30px 0;
 }
 
 .inc-exp-container > div {
-  flex: 1;
+  border-radius: 10px;
   text-align: center;
+  padding: 20px;
+  width: 45%;
 }
 
 .inc-exp-container > div:first-of-type {
-  border-right: 1px solid #dedede;
+  background-color: #006f3c;
+}
+.inc-exp-container > div:last-of-type {
+  background-color: #bf212f;
 }
 
 .money {
@@ -65,11 +96,11 @@ h4 {
 }
 
 .money.plus {
-  color: #2ecc71;
+  color: white;
 }
 
 .money.minus {
-  color: #c0392b;
+  color: white;
 }
 
 label {
@@ -103,6 +134,11 @@ input[type="number"] {
   width: 40%;
   margin: 30px 0;
   padding: 10px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  transform: translateY(2px);
 }
 
 .btn:focus,
@@ -111,10 +147,10 @@ input[type="number"] {
 }
 
 .btn.add {
-  background-color: #2ecc71;
+  background-color: #006f3c;
 }
 .btn.subtract {
-  background-color: #c0392b;
+  background-color: #bf212f;
 }
 
 .list {
@@ -125,6 +161,7 @@ input[type="number"] {
 
 .list li {
   background-color: #fff;
+  font-weight: 700;
   box-shadow: var(--box-shadow);
   color: #333;
   display: flex;
@@ -135,11 +172,13 @@ input[type="number"] {
 }
 
 .list li.plus {
-  border-right: 5px solid #2ecc71;
+  color: #006f3c;
+  background-color: rgb(0, 111, 60, 0.2);
 }
 
 .list li.minus {
-  border-right: 5px solid #c0392b;
+  color: #bf212f;
+  background-color: rgb(191, 33, 47, 0.2);
 }
 
 .delete-btn {
@@ -160,4 +199,53 @@ input[type="number"] {
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+#form {
+  display: block;
+
+  position: relative;
+  background-color: #264b96;
+  border-radius: 9px;
+  color: white;
+  padding: 20px;
+}
+
+.bigbutton {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  content: "";
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  background-color: #264b96;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  overflow: hidden;
+}
+
+.bigbutton:hover {
+  background-color: #445b89;
+  transform: translateY(2px);
+}
+
+.bigbuttontext {
+  position: absolute;
+  top: 30%;
+  color: rgb(255, 255, 255, 0.8);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+h1.bigbuttontext {
+  font-size: 100px;
+  top: 33%;
 }
