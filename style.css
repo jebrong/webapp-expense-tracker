@@ -87,6 +87,11 @@ input[type="number"] {
   width: 100%;
 }
 
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 .btn {
   cursor: pointer;
   background-color: #9c88ff;
@@ -95,14 +100,21 @@ input[type="number"] {
   border: 0;
   display: block;
   font-size: 16px;
-  margin: 10px 0 30px;
+  width: 40%;
+  margin: 30px 0;
   padding: 10px;
-  width: 100%;
 }
 
 .btn:focus,
 .delete-btn:focus {
   outline: 0;
+}
+
+.btn.add {
+  background-color: #2ecc71;
+}
+.btn.subtract {
+  background-color: #c0392b;
 }
 
 .list {
